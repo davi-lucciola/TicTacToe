@@ -1,17 +1,13 @@
-import Game from "../components/Game";
-import './App.css'
-
+import Game from "../components/TicTacToe";
+import Header from "../components/Header";
+import { TicTacToeContextProvider } from "../context/TicTacToeContext.jsx";
 
 function App() {  
   return (
-    <>
-      <header>
-        <button> Reset Game </button>
-      </header>
-      <main>
-        <Game />
-      </main>
-    </>
+    <TicTacToeContextProvider>
+      <Header />
+      <Game />
+    </TicTacToeContextProvider>
   );
 }
 
