@@ -16,17 +16,46 @@ export const StyledList = styled.ul`
 
 export const StyledListItem = styled.li`
   display: flex;
-  flex-direction: ${(props) => (props.switch ? "column" : "row")};
+  justify-content: center;
+  align-items: center;
+  width: 20%;
 
   font-size: 28px;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-weight: 900;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-weight: 900; */
 
   cursor: default;
   transition: 0.3s;
-  
-  &:hover, p.cur-player {
-    color: ${(props) => (props.player == "X" ? "gold" : "purple")};
+
+  p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 2px solid black; */
+    border-radius: 24px;
+    padding: 12px 40px;
+    transition: 0.3s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: ${(props) =>
+        props.player == "X" ? "goldenrod" : "purple"};
+      ${(props) => (props.player == "X" ? "goldenrod" : "purple")};
+
+      box-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
+    }
+  }
+
+  p span {
+    font-size: larger;
+    margin-left: 20px;
+    /* transform: translateY(); */
+    color: ${(props) => (props.player == "X" ? "goldenrod" : "purple")};
+    transition: 0.3s;
+  }
+
+  p:hover span,
+  p:hover {
+    color: whitesmoke;
   }
 `;

@@ -6,8 +6,6 @@ import { StyledTicTacToe, StyledDiv, StyledSection } from "./styles";
 export default function Game() {
   const { game, changeGameValue } = useContext(TicTacToeContext);
 
-  
-  
   return (
     <StyledTicTacToe>
       <StyledSection id="jogo-da-velha">

@@ -17,7 +17,7 @@ export const StyledDiv = styled.div`
   justify-content: center;
   cursor: ${(props) => (props.player == null ? "pointer" : "default")};
 
-  color: ${(props) => (props.player == "X" ? "gold" : "purple")};
+  color: ${(props) => (props.player == "X" ? "goldenrod" : "purple")};
   font-family: cursive;
   font-size: 120px;
 

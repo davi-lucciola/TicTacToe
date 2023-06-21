@@ -1,6 +1,12 @@
 import { useContext } from 'react';
 import { TicTacToeContext } from '../../context/TicTacToeContext';
-import { StyledHeader, StyledList, StyledListItem } from "./styles";
+import { IconContainer } from '../IconContainer';
+import { BiUser, BiLogOutCircle } from 'react-icons/bi'
+import {
+  StyledHeader,
+  StyledList,
+  StyledListItem,
+} from "./styles";
 
 
 export default function Header() {
@@ -9,17 +15,23 @@ export default function Header() {
   return (
     <StyledHeader>
       <StyledList>
-        <StyledListItem>
-          <p className='cur-player'>
+        <StyledListItem player={currentPlayer}>
+          <p>
             Player: <span> {currentPlayer} </span>{" "}
           </p>
         </StyledListItem>
-        <StyledListItem switch={true}>
-          <p> Change Player </p>
-          <input type="checkbox" name="" id="" />
+        <StyledListItem player={currentPlayer}>
+          <p onClick={() => resetGame()}>Reset Game</p>
         </StyledListItem>
         <StyledListItem>
-          <p onClick={() => resetGame()}>Reset Game</p>
+          <IconContainer
+            icon={<BiUser className="child" />}
+            player={currentPlayer}
+          />
+          <IconContainer
+            icon={<BiLogOutCircle className="child" />}
+            player={currentPlayer}
+          />
         </StyledListItem>
       </StyledList>
     </StyledHeader>

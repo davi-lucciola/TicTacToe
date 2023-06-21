@@ -7,8 +7,7 @@ export const TicTacToeContext = createContext();
 
 
 export function TicTacToeContextProvider({ children }) {
-
-  const [currentPlayer, setCurrentPlayer] = useState("X");
+  const [currentPlayer, setCurrentPlayer] = useState(PLAYERS.X);
   const [game, setGame] = useState([
     [null, null, null],
     [null, null, null],
@@ -60,11 +59,11 @@ export function TicTacToeContextProvider({ children }) {
     }
 
     const haveSpace = game.reduce((acc, cur) => {
-      return cur.filter(value => value == null).length == 0 ?
-        true : false && acc
-    })
+      acc += cur.reduce((acc1, cur1) => acc1 + (cur1 == null ? 0 : 1), 0);
+      return acc
+    }, 0);
 
-    return haveSpace ? true : null;
+    return haveSpace == 9 ? true : null;
   }
   
   return (
