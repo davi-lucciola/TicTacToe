@@ -3,7 +3,7 @@ import { TicTacToeContext } from "../../context/TicTacToeContext";
 import { StyledTicTacToe, StyledDiv, StyledSection } from "./styles";
 
 
-export default function Game() {
+export default function TicTacToe() {
   const { game, changeGameValue } = useContext(TicTacToeContext);
 
   return (

@@ -28,11 +28,10 @@ export function TicTacToeContextProvider({ children }) {
     const newGame = [...game];
     newGame[x][y] = currentPlayer;
     setGame(newGame);
-    setCurrentPlayer(PLAYERS.X == currentPlayer ? PLAYERS.O : PLAYERS.X);
-
     if (verifyVictory()) {
       resetGame();
     }
+    setCurrentPlayer(PLAYERS.X == currentPlayer ? PLAYERS.O : PLAYERS.X);
   }
 
   function verifyVictory() {
