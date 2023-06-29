@@ -15,7 +15,7 @@ export const StyledSection = styled.section`
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
-  max-width: 600px;
+  max-width: 24rem;
 `;
 
 export const StyledDiv = styled.div`
@@ -26,10 +26,10 @@ export const StyledDiv = styled.div`
 
   color: ${(props) => (props.player == "X" ? "goldenrod" : "purple")};
   font-family: cursive;
-  font-size: 9rem;
+  font-size: 6rem;
 
-  width: 180px;
-  height: 180px;
+  width: 7rem;
+  height: 7rem;
 
   background-color: lightgray;
   border-radius: 20px;

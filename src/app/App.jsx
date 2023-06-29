@@ -1,16 +1,14 @@
-import Game from "../components/TicTacToe";
-import Header from "../components/Header";
-import { TicTacToeContextProvider } from "../context/TicTacToeContext.jsx";
-import Footer from "../components/Footer";
 import Wave from "../components/Wave"
+import { Game } from "../components/Game";
+import { TicTacToeContextProvider } from "../context/TicTacToeContext.jsx";
+
+
 
 function App() {  
   return (
     <TicTacToeContextProvider>
-      <Wave side='top'/>
-      <Header />
+      <Wave side="top" />
       <Game />
-      <Footer />
     </TicTacToeContextProvider>
   );
 }

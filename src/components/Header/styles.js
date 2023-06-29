@@ -4,6 +4,19 @@ import styled from "styled-components";
 export const StyledHeader = styled.header`
   text-align: center;
 
+  h1 {
+    text-shadow: 1px 1px 20px
+      ${(props) =>
+        props.player == "X"
+          ? "rgba(218, 165, 32, 0.5)"
+          : "	rgba(128, 0, 128, 0.5)"};
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
   h2 {
     display: flex;
     align-items: center;
