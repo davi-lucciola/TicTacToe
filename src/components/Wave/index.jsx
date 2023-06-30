@@ -9,13 +9,16 @@ const StyledDiv = styled.div`
   width: 100%;
   transform: translateY(-70px) rotateX(180deg);
   z-index: -1;
-  
+
+  @media (max-width: 760px) {
+    transform: translateY(-20px) rotateX(180deg);
+  }
 
   svg {
     transition: 0.3s;
-    fill: ${(props) => props.player == 'X' ? 'goldenrod' : 'purple'};
+    fill: ${(props) => (props.player == "X" ? "goldenrod" : "purple")};
   }
-`
+`;
 
 export const Wave = () => {
   const { currentPlayer } = useContext(TicTacToeContext);

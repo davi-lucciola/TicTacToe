@@ -11,6 +11,7 @@ export const StyledHeader = styled.header`
           ? "rgba(218, 165, 32, 0.5)"
           : "	rgba(128, 0, 128, 0.5)"};
     transition: 0.3s;
+    cursor: default;
 
     &:hover {
       transform: scale(1.1);

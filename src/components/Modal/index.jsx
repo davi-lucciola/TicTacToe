@@ -13,11 +13,7 @@ export const Modal = ({ winner, isOpen, onClose }) => {
         <span className="close-button" onClick={onClose}>
           &times;
         </span>
-        <h2>
-          {winner != null
-            ? `O jogador "${winner}" venceu!`
-            : "Empate!"}
-        </h2>
+        <h2>{winner != null ? `O jogador "${winner}" venceu!` : "Empate!"}</h2>
       </div>
     </StyledModal>
   );

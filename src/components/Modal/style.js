@@ -18,20 +18,23 @@ export const StyledModal = styled.div`
     justify-content: center;
     background-color: white;
 
+    padding: 20px;
     width: 30%;
+    min-width: 300px;
     height: 30%;
 
     border-radius: 12px;
-    border-bottom: 20px solid ${(props) => {
-      switch (props.player) {
-        case 'X':
-          return 'goldenrod'
-        case 'O':
-          return 'purple'
-        default:
-          return 'lightgray'
-      } 
-    }};
+    border-bottom: 20px solid
+      ${(props) => {
+        switch (props.player) {
+          case "X":
+            return "goldenrod";
+          case "O":
+            return "purple";
+          default:
+            return "lightgray";
+        }
+      }};
   }
 
   .close-button {
@@ -40,5 +43,39 @@ export const StyledModal = styled.div`
     right: 36%;
 
     cursor: pointer;
+    width: 22px;
+    padding-left: 6px;
+    padding-bottom: 3px;
+    border-radius: 50%;
+
+    @media (max-width: 1000px) {
+      position: relative;
+      top: -67px;
+      right: -247px;
+
+      width: 22px;
+      padding-left: 4.5px;
+      padding-bottom: 2.5px;
+    }
+
+    &:hover {
+      color: whitesmoke;
+      font-weight: 900;
+      background-color: ${(props) => {
+        switch (props.player) {
+          case "X":
+            return "goldenrod";
+          case "O":
+            return "purple";
+          default:
+            return "lightgray";
+        }
+      }};
+    }
+  }
+
+  h2 {
+    text-align: center;
+    min-width: 240px;
   }
 `;

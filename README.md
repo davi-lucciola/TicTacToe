@@ -1,9 +1,13 @@
 # Jogo da Velha
 
-Jogo da velha feito com ReactJS
 By: Davi Lucciola
 
-## Iniciando local
+Jogo da velha feito com ReactJS
+
+- [Clique aqui para jogar](https://tic-tac-toe-chi-ecru.vercel.app/)
+
+
+### Iniciando local
 
 > `git clone https://github.com/davi-lucciola/TicTacToe.git`
 

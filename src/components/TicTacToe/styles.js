@@ -10,12 +10,18 @@ export const StyledTicTacToe = styled.main`
 `;
 
 export const StyledSection = styled.section`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  max-width: 24rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(110px, 1fr));
+  grid-template-rows: repeat(3, minmax(110px, 1fr));
+  grid-gap: 10px;
+  font-size: 4.8rem;
+  transition: 0.3s;
+
+  @media (max-width: 760px) {
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-template-rows: repeat(3, minmax(100px, 1fr));
+    font-size: 4rem;
+  }
 `;
 
 export const StyledDiv = styled.div`
@@ -26,10 +32,6 @@ export const StyledDiv = styled.div`
 
   color: ${(props) => (props.player == "X" ? "goldenrod" : "purple")};
   font-family: cursive;
-  font-size: 6rem;
-
-  width: 7rem;
-  height: 7rem;
 
   background-color: lightgray;
   border-radius: 20px;
