@@ -27,9 +27,11 @@ Desenvolver um Jogo da Velha
 ### Solução
 
 - Armazenar o estado do jogo
+
 Para armazenar o estado do jogo, utilizei uma matrix 3x3, representada por um array de 2 dimensões. Uma posição na matrix poderia ter 3 valores: `'X'`, `'O'` ou `null`, que era o jogador que tinha jogado ali, ou se estava vazio (quando null).
 
 - Verificação de vitória / empate
+
 Para verificação de vitória, na função que faz a jogada do jogador para trocar, a função de verificação de vitória é chamada, onde ela primeiro verifica se houve um jogador que ganhou nas linhas ou nas colunas, depois verifica se um jogador ganhou nas diagonais. Caso algum jogador tenha ganhado, ele retorna o jogador que venceu. Ao final, se nenhum jogador tiver ganhado ele retorna um booleano para saber se ainda há espaços disponiveis para jogar, caso não haja espaços disponiveis ele declara empate e reseta o jogo.
 
 ## Rodando local
